@@ -1,0 +1,41 @@
+{
+  "name": "@lgolabs/idempotency-client",
+  "version": "0.2.0",
+  "description": "Tiny TypeScript client for the LGO Labs Idempotency API. Stripe-style idempotency keys for AI agent tool calls.",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": [
+    "dist",
+    "src",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "vitest run"
+  },
+  "keywords": [
+    "idempotency",
+    "agents",
+    "mcp",
+    "stripe-style",
+    "lgolabs"
+  ],
+  "license": "MIT",
+  "homepage": "https://idempotency.lgolabs.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lgolabs/idempotency-client"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "typescript": "^5.6.3",
+    "vitest": "~2.1.0"
+  }
+}
