@@ -72,7 +72,20 @@ try {
 
 ## Pay-per-call (x402)
 
-Pass a signed `xPayment` header value instead of `apiKey`. Free tier: 500 calls/day.
+Pass a signed `xPayment` header value instead of `apiKey`. The API responds with 402 + payment requirements per [x402.org](https://www.x402.org), your wallet signs a USDC transfer on Base, you retry with the signed payload, and the request goes through. No signup.
+
+```ts
+const idem = new IdempotencyClient({
+  apiUrl: 'https://idempotency.lgolabs.com',
+  xPayment: signedX402Header,  // alternative to apiKey
+})
+```
+
+Free tier: 500 calls/day. Beyond that, 1000 atomic micro-USDC ($0.001) per call.
+
+## API reference
+
+Full spec: [`idempotency.lgolabs.com/openapi.yaml`](https://idempotency.lgolabs.com/openapi.yaml).
 
 ## License
 
