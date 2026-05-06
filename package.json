@@ -1,6 +1,6 @@
 {
   "name": "@lgolabs/idempotency-client",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Tiny TypeScript client for the LGO Labs Idempotency API. Stripe-style idempotency keys for AI agent tool calls.",
   "type": "module",
   "main": "dist/index.js",
